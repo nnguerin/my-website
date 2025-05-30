@@ -1,11 +1,11 @@
 {
-  "name": ".",
+  "name": "my-website",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --port 3000",
+    "dev": "vite --port 3000 & npx @tanstack/router-cli watch",
+    "build": "npx @tanstack/router-cli generate && vite build && tsc",
     "start": "vite --port 3000",
-    "build": "vite build && tsc",
     "serve": "vite preview",
     "test": "vitest run",
     "lint": "eslint",
